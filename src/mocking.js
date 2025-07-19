@@ -14,11 +14,17 @@ export function getPriceInCurrency(price, currency) {
 // Exercise
 export function getShippingInfo(destination) {
   const quote = getShippingQuote(destination);
-  if (!quote) return 'Shipping Unavailable';
+  if (!quote) return 'There is no shipping available';
   return `Shipping Cost: $${quote.cost} (${quote.estimatedDays} Days)`;
 }
 
 // Lesson: Interaction testing
+// the keyword **async** automatically makes a function return a Promise,
+// even if you don’t explicitly await anything inside it.
+// is equivalent to this:
+// export function renderPage() {
+//   return Promise.resolve('<div>content</div>');
+// }
 export async function renderPage() {
   trackPageView('/home');
 
