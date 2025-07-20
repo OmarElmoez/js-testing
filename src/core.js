@@ -30,7 +30,11 @@ export function calculateDiscount(price, discountCode) {
 export function validateUserInput(username, age) {
   let errors = [];
 
-  if (typeof username !== 'string' || username.length < 3 || username.length > 255) {
+  if (
+    typeof username !== 'string' ||
+    username.length < 3 ||
+    username.length > 255
+  ) {
     errors.push('Invalid username');
   }
 
@@ -81,7 +85,7 @@ export function fetchData() {
 }
 
 export function failedFetchData() {
-  return Promise.reject({reason: 'operation failed'})
+  return Promise.reject({ reason: 'operation failed' });
 }
 
 // Lesson: Setup and teardown

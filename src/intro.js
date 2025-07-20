@@ -14,7 +14,7 @@ export function fizzBuzz(n) {
 export function calculateAverage(numbers) {
   if (numbers.length === 0) return NaN;
 
-  const sum = numbers.reduce((sum, current) => sum + current, 0)
+  const sum = numbers.reduce((sum, current) => sum + current, 0);
 
   return sum / numbers.length;
 }
@@ -34,10 +34,9 @@ export function calculateAverage(numbers) {
 
 // better one
 export function factorial(number) {
-
   if (number < 0) return undefined;
 
   if (number === 0 || number === 1) return 1;
 
-  return number * factorial(number - 1)
+  return number * factorial(number - 1);
 }
